@@ -1,0 +1,22 @@
+{
+  "name": "teyvat-rift-elemental-arena",
+  "version": "0.1.0",
+  "description": "Genshin Impact x League of Legends 3D MOBA prototype — open-world exploration + lane push, towers, minions, QWER abilities. Desktop via Electron, web via Vite.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3002 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 3002",
+    "electron": "electron electron/main.js",
+    "start:desktop": "npm run build && electron electron/main.js",
+    "dist:desktop": "electron-builder --win --linux --mac --publish never"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}

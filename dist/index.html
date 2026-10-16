@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:," />
+  <title>Teyvat Rift — Elemental Arena (Genshin x LoL 3D)</title>
+  <script type="module" crossorigin src="/assets/index-BK-j0vP2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-p5lv1KYQ.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game-canvas"></canvas>
+    <div id="hud">
+      <div id="topbar">
+        <div id="score-blue">0</div>
+        <div id="match-timer">00:00</div>
+        <div id="score-red">0</div>
+      </div>
+      <div id="killfeed"></div>
+      <canvas id="minimap" width="180" height="180"></canvas>
+      <div id="bottom-hud">
+        <div id="portrait">A</div>
+        <div id="bars">
+          <div id="hp-wrap"><div id="hp-fill"></div><span id="hp-text"></span></div>
+          <div id="mp-wrap"><div id="mp-fill"></div><span id="mp-text"></span></div>
+          <div id="xp-wrap"><div id="xp-fill"></div></div>
+          <div id="abilities">
+            <div class="ab" id="ab-q"><b>Z</b><span>Pyro (1/J)</span><i></i></div>
+            <div class="ab" id="ab-w"><b>X</b><span>Dash (2/K)</span><i></i></div>
+            <div class="ab" id="ab-e"><b>C</b><span>Shield (3/L)</span><i></i></div>
+            <div class="ab" id="ab-r"><b>V</b><span>Fall (4/I)</span><i></i></div>
+          </div>
+        </div>
+        <div id="stats">
+          <div id="level-badge">Lv 1</div>
+          <div id="gold">💰 475</div>
+          <div id="kda">0 / 0 / 0</div>
+          <div id="stamina-wrap"><div id="stamina-fill"></div></div>
+        </div>
+      </div>
+      <div id="announce"></div>
+      <div id="crosshair" class="hidden"><div id="hitmarker" class="hidden"></div></div>
+      <div id="ammo" class="hidden"></div>
+      <div id="ak-banner" class="hidden">🔫 MODO CSGO — clic / F disparar • R recargar • G tercera persona</div>
+      <div id="shop" class="hidden">
+        <h3>Blacksmith Shop <small>(press B to close)</small></h3>
+        <div id="shop-items"></div>
+      </div>
+      <div id="scoreboard" class="hidden"></div>
+      <div id="hint">WASD mover • Arrastrar ratón órbita • Espacio salto / mantén para planear • Shift sprint • Habilidades: Z/X/C/V (o 1/2/3/4 o J/K/L/I) • F o clic-izq atacar • Clic-der mover • B tienda (🔫 AK-47 + 🍡 1 oro) • Tab puntos</div>
+    </div>
+    <div id="menu">
+      <div class="menu-card">
+        <h1>⚔️ TEYVAT RIFT</h1>
+        <p class="sub">Elemental Arena — Genshin exploration × LoL MOBA</p>
+        <div class="heroes">
+          <button class="hero-pick selected" data-hero="aether">🔥 Yan Fei<br/><small>Pyro • waifu equilibrada</small></button>
+          <button class="hero-pick" data-hero="anemo">👁️ Lan Yun<br/><small>Horror indescriptible</small></button>
+          <button class="hero-pick" data-hero="geo">💎 Ning Mei<br/><small>Geo • waifu tanque</small></button>
+        </div>
+        <button id="play-btn">▶ ENTER THE RIFT (Desktop 3D)</button>
+        <p class="help">Destroy the enemy Nexus! Push with minions, smash towers, grab jungle chests. <br/>Genshin: stamina, glide, elemental reactions. LoL: last-hit gold, XP levels, towers, Nexus.</p>
+        <p class="perf">3v3 vs bots • 1 lane showcase + side lanes • Works with SwiftShader / integrated GPU</p>
+      </div>
+    </div>
+    <div id="end-screen" class="hidden">
+      <div class="menu-card">
+        <h1 id="end-title">VICTORY</h1>
+        <p id="end-stats"></p>
+        <button id="again-btn">↻ PLAY AGAIN</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
